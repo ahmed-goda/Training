@@ -1,0 +1,26 @@
+<h1>Testimonials</h1>
+
+<?php
+    /**
+     * @var \Training\Testimonials\Block\DisplayTestimonials $block
+     */
+    $testimonialsCollection = $block->getTestimonialsCollection();
+?>
+
+<?php if( empty(count($testimonialsCollection))): ?>
+
+    <p>We Couldn't Find Any Records!</p>
+
+<?php else: ?>
+    <ul>
+        <?php foreach ($testimonialsCollection as $testimonialObject): ?>
+            <li>
+                <p> <?php echo $testimonialObject->getTestimonialText(); ?> </p>
+                <p>
+                    Created by: <strong> <?php echo $testimonialObject->getFullName(); ?> </strong>
+                    at <strong> <?php echo date("d-m-Y", strtotime($testimonialObject->getCreatedAt())); ?> </strong><br>
+                </p>
+            </li>
+        <?php endforeach; ?>
+    </ul>
+<?php endif; ?>
