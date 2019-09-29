@@ -29,10 +29,10 @@ Customer Testimonials is a hand tailored module designed for one of the hottest 
     $ php bin/magento setup:upgrade
     $ php bin/magento setup:di:compile
     ```
-    => Flush the cache and reindex all.
-    and Hola!, the module now is properly installed.
+- Step 3: Flush the cache and reindex all
+    - Login as admin, visit the cache management page from System menu at the sidebar to flush the cache or use the command line utility. Hola!, the module now is properly installed.
 
-Log in as admin to find a new menu has been added to the sidebar under the name Testimonials from which you can manage and manipulate the data.
+As an admin you can now find a new menu has been added to the sidebar with the label Testimonials from which you can manage and manipulate the testimonials data.
 Navigate to System menu then Data Transfer Section and finally Import item, to access the drop down list where you can upload the offline collated data as an Excel sheet or whatever CSV file format.
 
 ### Troubleshooting
